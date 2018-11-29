@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>{{ truck.name }}</h1>
+  <dl class="list">
+    <dt>Name</dt>
+    <dd>{{ truck.name }}</dd>
+    <dt>foodtype</dt>
+    <dd>{{ truck.foodtype }}</dd>
+    <dt>avgcost</dt>
+    <dd>{{ truck.avgcost }}</dd>
+    <dt>Owner</dt>
+    <dd>{{ truck.owner }}</dd>
+    <dt>Description</dt>
+    <dd>{{ truck.description }}</dd>
+  </dl>
+  <div class="row">
+    <div class="col-md-12">
+      <a [routerLink]="['/truck-edit', truck._id]" class="btn btn-success">EDIT</a>
+     &nbsp;
+      <button class="btn btn-danger" type="button" (click)="deleteTruck(truck._id)">DELETE</button>
+    </div>
+  </div>
+</div>
